@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuckZKJ - Pixel Style Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="pixel-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#fuckzkj">FuckZKJ</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="videos/background.mp4" type="video/mp4">
+            <!-- 如果视频文件是其他格式，可以添加其他source标签 -->
+            <!-- <source src="videos/background.webm" type="video/webm"> -->
+            <!-- <source src="videos/background.ogv" type="video/ogg"> -->
+            您的浏览器不支持视频标签。
+        </video>
+    </div>
+
+    <main>
+        <section id="home" class="section">
+            <h1>Welcome to FuckZKJ</h1>
+            
+            <div class="pixel-box">
+                <div class="coming-soon">
+                    <span>CA:</span>
+                    <div class="copy-text" onclick="copyToClipboard('Coming Soon')">
+                        Coming Soon
+                        <span class="copy-tooltip">Click to Copy</span>
+                    </div>
+                </div>
+                <button class="buy-button" disabled>
+                    Buy $FuckZKJ
+                </button>
+            </div>
+        </section>
+
+        <section id="fuckzkj" class="section">
+            <h2>FuckZKJ</h2>
+            <p>Explore Pixel World</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>About Us</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

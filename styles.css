@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.pixel-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    z-index: 1000;
+    border-bottom: 4px solid #fff;
+}
+
+.pixel-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.pixel-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.pixel-nav a:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 4px 4px 0 #000;
+    color: #fff;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 像素风格边框 */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid #fff;
+    pointer-events: none;
+}
+
+/* 像素风格框框 */
+.pixel-box {
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.pixel-box::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 2px solid #fff;
+    pointer-events: none;
+}
+
+.coming-soon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.copy-text {
+    background: #333;
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.copy-text:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+.copy-tooltip {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    padding: 0.3rem 0.6rem;
+    border: 2px solid #fff;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.copy-text:hover .copy-tooltip {
+    opacity: 1;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background: #333;
+    color: #fff;
+    border: 4px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.buy-button:not(:disabled):hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+.buy-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #fff;
+    pointer-events: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .pixel-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .pixel-box {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .coming-soon {
+        font-size: 1rem;
+    }
+
+    .buy-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+} 
