@@ -32,6 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         lastScroll = currentScroll;
     });
+
+    // Twitter 链接点击处理
+    const twitterLink = document.getElementById('twitterLink');
+    twitterLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        // 这里等待您提供 Twitter 链接
+        // twitterLink.href = "您的Twitter链接";
+        alert('Twitter link will be added soon!');
+    });
 });
 
 // 复制到剪贴板功能
