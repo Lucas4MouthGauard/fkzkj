@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const twitterLink = document.getElementById('twitterLink');
     twitterLink.addEventListener('click', (e) => {
         e.preventDefault();
-        window.open('https://x.com/fuckzkj', '_blank');
+        window.open('https://x.com/ZkjFuck', '_blank');
     });
 });
 
